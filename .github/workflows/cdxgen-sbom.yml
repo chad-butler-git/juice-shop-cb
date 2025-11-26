@@ -33,7 +33,7 @@ jobs:
           -v /tmp:/tmp \
           -v "${{ github.workspace }}:/app:rw" \
           ghcr.io/cyclonedx/cdxgen:v11.11.0 \
-          -r /app --no-install-deps -o /app/reports/sbom.cdx.json
+          -r /app -o /app/reports/sbom.cdx.json
 
       # Create downloadable artifact
       - name: Upload SBOM artifact
